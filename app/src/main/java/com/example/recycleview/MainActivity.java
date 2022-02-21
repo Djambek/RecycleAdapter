@@ -1,6 +1,8 @@
 package com.example.recycleview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +17,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView list = (ListView) this.findViewById(R.id.listview);
+        RecyclerView recyclerView = findViewById(R.id.recycleview);
+        recyclerView.setAdapter(new NumbersRvAdapter());
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        /*
+        ListView list = (ListView) this.findViewById(R.id.recycleview);
         list.setAdapter(new ResultAdapter(this, generate(10000)));
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -31,5 +37,8 @@ public class MainActivity extends AppCompatActivity {
             digitals[i] = i;
         }
         return digitals;
+    }
+
+         */
     }
 }

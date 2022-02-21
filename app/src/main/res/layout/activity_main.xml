@@ -7,8 +7,8 @@
     tools:context=".MainActivity">
 
 
-    <ListView
-        android:id="@+id/listview"
+    <view class="androidx.appcompat.app.AlertController$RecycleListView"
+        android:id="@+id/recycleview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
